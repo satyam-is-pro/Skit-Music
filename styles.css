@@ -398,7 +398,7 @@ button {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     color: #ffffff;
-    font-family: 'Orbitron', 'Space Grotesk', monospace;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.3px;
@@ -517,7 +517,7 @@ button::before {
         width: calc(50% - 4px);
         height: 42px;
         padding: 8px 6px;
-        font-size: 9px;
+        font-size: 14px;
         border-radius: 8px;
         letter-spacing: 0.05px;
         line-height: 1.2;
