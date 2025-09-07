@@ -549,25 +549,25 @@ button::before {
     }
 
     .soundboard {
-        width: 85%;
+        width: 86%;
         max-width: 380px;
-        gap: 6px;
-        padding: 15px 12px 50px 12px;
+        gap: 6.5px;
+        padding: 15px 13px 52px 13px;
         min-height: auto;
         border-radius: 18px;
         position: relative;
         margin-bottom: 0;
         overflow: visible;
-        transform: scale(0.95);
+        transform: scale(0.93);
     }
     
     button {
-        flex: 1 1 calc(50% - 3px);
+        flex: 1 1 calc(50% - 3.25px);
         min-width: 0;
-        width: calc(50% - 3px);
-        height: 36px;
-        padding: 6px 8px;
-        font-size: 12px;
+        width: calc(50% - 3.25px);
+        height: 38px;
+        padding: 6.5px 9px;
+        font-size: 12.5px;
         border-radius: 8px;
         letter-spacing: 0.05px;
         line-height: 1.1;
@@ -575,7 +575,7 @@ button::before {
     
     .soundboard .footer {
         position: absolute;
-        bottom: 15px;
+        bottom: 5px;
         left: 50%;
         transform: translateX(-50%);
         margin: 0;
