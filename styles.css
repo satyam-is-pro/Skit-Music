@@ -527,6 +527,7 @@ button::before {
         margin-top: 15px;
         font-size: 11px;
         padding: 8px 12px;
+        position: fixed;
     }
     
     .star {
