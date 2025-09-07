@@ -527,28 +527,25 @@ button::before {
         animation: planetMove3 25s ease-in-out infinite, planetGlow3 5s ease-in-out infinite alternate;
     }
 
+    .soundboard {
+        padding-bottom: 50px;
+        position: relative;
+    }
+
     .footer {
-        position: fixed !important;
-        bottom: env(safe-area-inset-bottom, 15px) !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        background: rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-        z-index: 9999;
-        animation: none !important;
-        transition: none !important;
-        margin: 0 !important;
-        padding: 8px 24px !important;
-        width: auto !important;
-        min-width: 200px !important;
-        max-width: 90% !important;
-        text-align: center !important;
-        border-radius: 30px !important;
-        border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        padding: 6px 15px;
+        font-size: 11px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        width: auto;
+        margin: 0;
     }
 
     .soundboard {
