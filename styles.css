@@ -528,12 +528,21 @@ button::before {
     }
 
     .footer {
-        position: fixed;
-        bottom: 15px;
+        position: fixed !important;
+        bottom: 15px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
         background: rgba(0, 0, 0, 0.4);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
         z-index: 1000;
+        /* Prevent any animations from affecting the footer */
+        animation: none !important;
+        transition: none !important;
+        will-change: auto;
+        /* Ensure no margin changes */
+        margin: 0 !important;
+        padding: 8px 20px !important;
     }
 
     .soundboard {
