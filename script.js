@@ -1,14 +1,17 @@
+// Pre-load audio elements for better performance
+const audioElements = new Map();
 let currentAudio = null;
 
 const audioFiles = [
-    { label: 'Beginning', src: 'Audio/1. Beginning.mp3' },
-    { label: 'May I come in', src: 'Audio/2. May I come in.mp3' },
-    { label: 'Donald Trump', src: 'Audio/3. Donald Trump.mp3' },
-    { label: 'Throwing page', src: 'Audio/4. Throwing page.mp3' },
-    { label: 'Bell', src: 'Audio/5. Bell.mp3' },
-    { label: 'PT Period', src: 'Audio/6. PT Period.mp3' },
-    { label: 'Moye Moye', src: 'Audio/7. Moye Moye.mp3' },
-    { label: 'Google', src: 'Audio/Google(1).mp3' },
+    { label: '1. Entry', src: 'Audio/KGF entry music.mp3' },
+    { label: '2. Snap', src: 'Audio/Finger snap.mp3' },
+    { label: '3. Snap', src: 'Audio/Finger snap.mp3' },
+    { label: '4. Rain', src: 'Audio/real-rain-sound-379215.mp3' },
+    { label: '5. Yay', src: 'Audio/yay-6326.mp3' },
+    { label: '6. Satyam Entry', src: 'Audio/satyam.mp3' },
+    { label: '7. Snap', src: 'Audio/Finger snap.mp3' },
+    { label: '8. Snap', src: 'Audio/Finger snap.mp3' },
+    { label: '9. Ayush Entry', src: 'Audio/May i Come In Kgf.mp3' },
     { label: 'Nature Future', src: 'Audio/Nature Future.mp3' },
     { label: 'Exam Song', src: 'Audio/8. Exam Song.mp3' },
     { label: 'Satyam entering', src: 'Audio/Satyam entering.mp3' },
@@ -30,8 +33,16 @@ const audioFiles = [
 
 function createSoundButtons() {
     const soundboard = document.getElementById('soundboard');
+    const fragment = document.createDocumentFragment();
 
     audioFiles.forEach(audio => {
+        // Pre-load audio elements
+        if (!audioElements.has(audio.src)) {
+            const audioElement = new Audio(audio.src);
+            audioElement.preload = 'auto';
+            audioElements.set(audio.src, audioElement);
+        }
+
         const button = document.createElement('button');
         button.textContent = audio.label;
 
@@ -41,12 +52,17 @@ function createSoundButtons() {
                 currentAudio.currentTime = 0;
             }
 
-            currentAudio = new Audio(audio.src);
+            currentAudio = audioElements.get(audio.src);
+            if (currentAudio.currentTime !== 0) {
+                currentAudio.currentTime = 0;
+            }
             currentAudio.play();
         });
 
-        soundboard.appendChild(button);
+        fragment.appendChild(button);
     });
+    
+    soundboard.appendChild(fragment);
 }
 
 createSoundButtons();

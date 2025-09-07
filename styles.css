@@ -14,7 +14,22 @@ body {
     overflow: hidden;
 }
 
-/* Enhanced Grid Background with Stars */
+/* En    .footer {
+        position: fixed;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        font-size: 13px;
+        padding: 10px 24px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);ground with Stars */
 body::before {
     content: '';
     position: fixed;
@@ -70,7 +85,7 @@ body::after {
     width: 100%;
     height: 100%;
     background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.3) 100%);
-    z-index: -1;
+    z-index: -2;
 }
 
 /* Colorful Floating Planets */
@@ -78,7 +93,8 @@ body::after {
     position: absolute;
     border-radius: 50%;
     opacity: 1.0;
-    z-index: -2;
+    z-index: -1;
+    will-change: transform;
 }
 
 .planet:nth-child(1) {
