@@ -529,20 +529,26 @@ button::before {
 
     .footer {
         position: fixed !important;
-        bottom: 15px !important;
+        bottom: env(safe-area-inset-bottom, 15px) !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         background: rgba(0, 0, 0, 0.4);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
-        z-index: 1000;
-        /* Prevent any animations from affecting the footer */
+        z-index: 9999;
         animation: none !important;
         transition: none !important;
-        will-change: auto;
-        /* Ensure no margin changes */
         margin: 0 !important;
-        padding: 8px 20px !important;
+        padding: 8px 24px !important;
+        width: auto !important;
+        min-width: 200px !important;
+        max-width: 90% !important;
+        text-align: center !important;
+        border-radius: 30px !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
     }
 
     .soundboard {
