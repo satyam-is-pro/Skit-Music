@@ -3,13 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instant Soundboard</title>
+    <title>Skit</title>
+    
+    <!-- Prevent Caching and Cookies -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta http-equiv="Set-Cookie" content="cookiename=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/">
+    <meta name="referrer" content="no-referrer">
+    
+    <!-- Cool Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="A beautiful anime-style soundboard for instant audio playback">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Skit">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href=download.png>
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="soundboard" class="soundboard">
-        
+    <!-- Floating Planets -->
+    <div class="planet"></div>
+    <div class="planet"></div>
+    <div class="planet"></div>
+    
+    <!-- Falling Stars -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    
+    <div class="soundboard" id="soundboard">
+        <!-- Buttons will be dynamically generated here -->
     </div>
+    
+    <footer class="footer">
+        Made with ❤️ by <a href="https://github.com/satyam-is-pro" target="_blank">satyam-is-pro</a>
+    </footer>
 
     <script src="script.js"></script>
 </body>
