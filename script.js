@@ -75,48 +75,6 @@ function createSoundButtons() {
 
 createSoundButtons();
 
-// Orientation lock for mobile devices
-function lockOrientation() {
-    if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('portrait').catch(err => {
-            console.log('Orientation lock not supported or failed:', err);
-        });
-    } else if (screen.lockOrientation) {
-        // Fallback for older browsers
-        screen.lockOrientation('portrait');
-    } else if (screen.mozLockOrientation) {
-        // Firefox
-        screen.mozLockOrientation('portrait');
-    } else if (screen.msLockOrientation) {
-        // IE/Edge
-        screen.msLockOrientation('portrait');
-    }
-}
-
-// Check if device is mobile and lock orientation
-function isMobileDevice() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
-           (window.innerWidth <= 768 && 'ontouchstart' in window);
-}
-
-// Apply orientation lock on mobile devices
-if (isMobileDevice()) {
-    // Lock orientation when page loads
-    lockOrientation();
-    
-    // Re-lock orientation when orientation changes
-    window.addEventListener('orientationchange', () => {
-        setTimeout(lockOrientation, 100);
-    });
-    
-    // Also listen for resize events as backup
-    window.addEventListener('resize', () => {
-        if (isMobileDevice()) {
-            setTimeout(lockOrientation, 100);
-        }
-    });
-}
-
 // Disable caching and cookies in JavaScript
 if ('serviceWorker' in navigator) {
     // Unregister any existing service workers to prevent caching
