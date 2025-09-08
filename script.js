@@ -34,6 +34,7 @@ const audioFiles = [
     { label: '29. Snap', src: 'Audio/Finger snap.mp3' },
     { label: '30. Bell', src: 'Audio/school-bell_f0L9NQQ.mp3' },
     { label: '31. Few Days later', src: 'Audio/ssvid.net--A-FEW-DAYS-LATER-SOUND-EFFECT-l-Original-No-copyright.mp3' },
+    { label: '32. End', src: 'Audio/End.mp3' },
     
 ];
 
